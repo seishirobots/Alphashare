@@ -105,22 +105,11 @@ SUPPORTED_MIME_TYPES = [
 
 class Messages:
     START_TEXT = """
-🎉 **Welcome to {bot_name}!** 🎉
 
-Hello {user_mention}! I'm your secure file sharing assistant.
+ʙᴀᴋᴋᴀᴀᴀ!!! {user_mention}/n  ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.
 
-🔐 **Key Features:**
-• Secure File Sharing
-• Unique Download Links
-• Multiple File Types Support
-• Real-time Tracking
-• Force Subscribe
 
-📢 Join @Thealphabotz for updates!
-👨‍💻 Contact @adarsh2626 for support
-A Open Source Repo :- github.com/utkarshdubey2008/alphashare
-
-Use /help to see available commands!
+Use /help to see available commands!/n
 """
 
     HELP_TEXT = """
@@ -149,35 +138,16 @@ Use /help to see available commands!
 • Forward files & reply with `/batch`.  
 
 
-🛠 **Open Source:**  
-🔗 [GitHub](https://github.com/utkarshdubey2008/alphashare)  
-
-⚠️ **Need Help?** Contact [@adarsh2626](https://t.me/adarsh2626)  
 """
 
     ABOUT_TEXT = """
-ℹ️ **About {bot_name}**
 
-**Version:** `{version}`
-**Developer:** @adarsh2626
-**Language:** Python
-**Framework:** Pyrogram
+<b>○ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/rohitreddy4'>Rohit</a>\n"
+    "○ Developer: <a href='https://t.me/adityaabhinav'>Aditya Abhinav</a>\n"
+    "○ Lɪʙʀᴀʀʏ: <a href='https://github.com/pyrogram/pyrogram'>Pʏʀᴏɢʀᴀᴍ</a>\n"
+    "○ Mᴀɪɴ Cʜᴀɴɴᴇʟ: <a href='https://t.me/seishiro_atanime'>Seishiro At Anime</a>\n"
+    "○ Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ: <a href='https://t.me/seishiro_anime_is'>Seishiro Anime </a></b>"
 
-📢 **Updates:** @Thealphabotz
-🛠 **Support:** @adarsh2626
-
-**Features:**
-• Secure File Sharing
-• Force Subscribe
-• Admin Controls
-• Real-time Stats
-• Multiple File Types
-• Enhanced Security
-• Automatic File Type Detection
-
-use /repo to know more info
-
-Made with ❤️ by @adarsh2626
 """
 
     FILE_TEXT = """
@@ -198,7 +168,6 @@ Made with ❤️ by @adarsh2626
 ⚠️ **Access Restricted!**
 
 Please join our channel to use this bot:
-Bot By @Thealphabotz
 
 Click button below, then try again!
 """
