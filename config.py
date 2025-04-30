@@ -175,10 +175,10 @@ Click button below, then try again!
 class Buttons:
     def start_buttons() -> List[List[Dict[str, str]]]:
         return [
-                [
-                    InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
-                    InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
-                ],
+            [
+                InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
+                InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
+            ],
                 [
                     InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
                     InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
