@@ -175,37 +175,24 @@ Click button below, then try again!
 class Buttons:
     def start_buttons() -> List[List[Dict[str, str]]]:
         return [
-            [
-                {"text": "Help 📚", "callback_data": "help"},
-                {"text": "About ℹ️", "callback_data": "about"}
-            ],
-            [
-                {"text": "Channel 📢", "url": CHANNEL_LINK},
-                {"text": "Developer 👨‍💻", "url": DEVELOPER_LINK}
-            ]
+                [
+                    InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
+                    InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
+                ],
+                [
+                    InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
+                    ]
         ]
 
-    def help_buttons() -> List[List[Dict[str, str]]]:
-        return [
-            [
-                {"text": "Home 🏠", "callback_data": "home"},
-                {"text": "About ℹ️", "callback_data": "about"}
-            ],
-            [
-                {"text": "Channel 📢", "url": CHANNEL_LINK}
-            ]
-        ]
-
+    
     def about_buttons() -> List[List[Dict[str, str]]]:
         return [
-            [
-                {"text": "Home 🏠", "callback_data": "home"},
-                {"text": "Help 📚", "callback_data": "help"}
-            ],
-            [
-                {"text": "Channel 📢", "url": CHANNEL_LINK}
-            ]
-        ]
+                    [
+                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
+                    InlineKeyboardButton('🍁 ʙᴀᴄᴋ', callback_data = "back")
+                    ]
+                ]
 
     def file_buttons(file_uuid: str) -> List[List[Dict[str, str]]]:
         return [
