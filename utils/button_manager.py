@@ -84,68 +84,56 @@ class ButtonManager:
 
     def start_button(self) -> InlineKeyboardMarkup:
         buttons = [
-            [
-                InlineKeyboardButton("Help 📜", callback_data="help"),
-                InlineKeyboardButton("About ℹ️", callback_data="about")
-            ]
-        ]
-        
-        if config.CHANNEL_LINK:
-            if config.CHANNEL_LINK_2:
-                buttons.append([
-                    InlineKeyboardButton("Channel 1 📢", url=config.CHANNEL_LINK),
-                    InlineKeyboardButton("Channel 2 📢", url=config.CHANNEL_LINK_2)
-                ])
-            else:
-                buttons.append([
-                    InlineKeyboardButton("Channel 📢", url=config.CHANNEL_LINK)
-                ])
-                
-        buttons.append([
-            InlineKeyboardButton("Developer 👨‍💻", url=config.DEVELOPER_LINK)
-        ])
+                [
+                    InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
+                    InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
+                ],
+                [
+                    InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
+                    ]
+                ]
+            )
+        )
+    elif data == "close":
+        await query.message.delete()
+        try:
+            await query.message.reply_to_message.delete()
+        except:
+            pass
         
         return InlineKeyboardMarkup(buttons)
 
-    def help_button(self) -> InlineKeyboardMarkup:
-        buttons = [
-            [
-                InlineKeyboardButton("Home 🏠", callback_data="home"),
-                InlineKeyboardButton("About ℹ️", callback_data="about")
-            ]
-        ]
-        
-        if config.CHANNEL_LINK:
-            if config.CHANNEL_LINK_2:
-                buttons.append([
-                    InlineKeyboardButton("Channel 1 📢", url=config.CHANNEL_LINK),
-                    InlineKeyboardButton("Channel 2 📢", url=config.CHANNEL_LINK_2)
-                ])
-            else:
-                buttons.append([
-                    InlineKeyboardButton("Channel 📢", url=config.CHANNEL_LINK)
-                ])
-        
-        return InlineKeyboardMarkup(buttons)
-
+    
     def about_button(self) -> InlineKeyboardMarkup:
-        buttons = [
-            [
-                InlineKeyboardButton("Home 🏠", callback_data="home"),
-                InlineKeyboardButton("Help 📜", callback_data="help")
-            ]
-        ]
-        
-        if config.CHANNEL_LINK:
-            if config.CHANNEL_LINK_2:
-                buttons.append([
-                    InlineKeyboardButton("Channel 1 📢", url=config.CHANNEL_LINK),
-                    InlineKeyboardButton("Channel 2 📢", url=config.CHANNEL_LINK_2)
-                ])
-            else:
-                buttons.append([
-                    InlineKeyboardButton("Channel 📢", url=config.CHANNEL_LINK)
-                ])
+        buttons =[
+                    [
+                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
+                    InlineKeyboardButton('🍁 ʙᴀᴄᴋ', callback_data = "back")
+                    ]
+                ]
+            )
+        )
+    elif data == "back":
+        await query.message.edit_reply_markup(
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url= "https://t.me/seishiro_atanime"),
+                    ],
+                    [
+                    InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
+                    ]
+                ]
+            )
+        )
+    elif data == "close":
+        await query.message.delete()
+        try:
+            await query.message.reply_to_message.delete()
+        except:
+            pass
         
         return InlineKeyboardMarkup(buttons)
 
