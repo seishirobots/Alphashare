@@ -84,10 +84,10 @@ class ButtonManager:
 
     def start_button(self) -> InlineKeyboardMarkup:
         buttons = [
-                [
-                    InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
-                    InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
-                ],
+            [
+                InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
+                InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
+            ],
                 [
                     InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
                     InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
