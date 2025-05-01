@@ -93,8 +93,6 @@ class ButtonManager:
                     InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
                     ]
                 ]
-            )
-        )
     elif data == "close":
         await query.message.delete()
         try:
@@ -112,8 +110,6 @@ class ButtonManager:
                     InlineKeyboardButton('🍁 ʙᴀᴄᴋ', callback_data = "back")
                     ]
                 ]
-            )
-        )
     elif data == "back":
         await query.message.edit_reply_markup(
             reply_markup = InlineKeyboardMarkup(
@@ -126,8 +122,6 @@ class ButtonManager:
                     InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
                     ]
                 ]
-            )
-        )
     elif data == "close":
         await query.message.delete()
         try:
