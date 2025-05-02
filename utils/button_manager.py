@@ -85,50 +85,36 @@ class ButtonManager:
     def start_button(self) -> InlineKeyboardMarkup:
         buttons = [
             [
-                InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url = "t.me/seishiro_atanime"),
-                InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url = "t.me/seishiro_anime_is")
+                InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url="t.me/seishiro_atanime"),
+                InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url="t.me/seishiro_anime_is")
             ],
-                [
-                    InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
-                    ]
-                ]
-    elif data == "close":
-        await query.message.delete()
-        try:
-            await query.message.reply_to_message.delete()
-        except:
-            pass
-        
+            [
+                InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data="about"),
+                InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data="close")
+            ]
+        ]
         return InlineKeyboardMarkup(buttons)
-
+    
+    def help_button(self) -> InlineKeyboardMarkup:
+        buttons = [
+            [
+                InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url="t.me/seishiro_atanime"),
+                InlineKeyboardButton("🍁 ʀᴀɴᴅᴏᴍ", url="t.me/seishiro_anime_is")
+            ],
+            [
+                InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data="about"),
+                InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data="close")
+            ]
+        ]
+        return InlineKeyboardMarkup(buttons)
     
     def about_button(self) -> InlineKeyboardMarkup:
-        buttons =[
-                    [
-                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data = "close"),
-                    InlineKeyboardButton('🍁 ʙᴀᴄᴋ', callback_data = "back")
-                    ]
-                ]
-    elif data == "back":
-        await query.message.edit_reply_markup(
-            reply_markup = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("⚡️ ᴍᴀɪɴ ʜᴜʙ", url= "https://t.me/seishiro_atanime"),
-                    ],
-                    [
-                    InlineKeyboardButton("🛈 ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton("✘ ᴄʟᴏsᴇ", callback_data = "close")
-                    ]
-                ]
-    elif data == "close":
-        await query.message.delete()
-        try:
-            await query.message.reply_to_message.delete()
-        except:
-            pass
-        
+        buttons = [
+            [
+                InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data="close"),
+                InlineKeyboardButton('🍁 ʙᴀᴄᴋ', callback_data="back")
+            ]
+        ]
         return InlineKeyboardMarkup(buttons)
 
     def file_button(self, file_uuid: str) -> InlineKeyboardMarkup:
